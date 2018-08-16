@@ -146,7 +146,7 @@ exports.default = {
                 return h(
                     "span",
                     { "class": "v-page-total" },
-                    ["\xA0\u5171\xA0", this.$parent.total, "\xA0\u6761\xA0"]
+                    ["\xA0Total\xA0", this.$parent.total, "\xA0"]
                 );
             }
         },
@@ -259,7 +259,7 @@ exports.default = {
                 return h(
                     "span",
                     { "class": "v-page-goto" },
-                    ["\xA0\u524D\u5F80\xA0", h(
+                    ["\xA0Goto\xA0", h(
                         "input",
                         {
                             "class": "v-page-goto-input",
@@ -274,7 +274,7 @@ exports.default = {
                             }
                         },
                         []
-                    ), "\xA0\u9875\xA0"]
+                    ), "\xA0page\xA0"]
                 );
             }
         }
@@ -333,7 +333,7 @@ exports.default = {
                 var temp = {};
 
                 temp.value = x;
-                temp.label = x + ' 条/页';
+                temp.label = x + ' /page';
                 if (_this.newPageSize == x) {
                     temp.selected = true;
                 }

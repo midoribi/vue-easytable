@@ -4,7 +4,7 @@
 
         <li @click.stop.prevent="jumpPage(pageIndex - showPagingCount)" v-if="showJumpPrev"
             :class="[pageIndex=== 1 ? 'disabled' :'','v-page-li','v-page-jump-prev']"
-            :title="'向前 '+showPagingCount+' 页'">
+            :title="'before '+showPagingCount+' page'">
             <a><i class="v-icon-angle-double-left"></i></a>
         </li>
 
@@ -12,7 +12,7 @@
             :class='[num === pageIndex ? "v-page-li-active":"","v-page-li"]'><a>{{num}}</a></li>
 
         <li @click.stop.prevent="jumpPage(pageIndex + showPagingCount)" v-if="showJumpNext"
-            class="v-page-li v-page-jump-next" :title="'向后 '+showPagingCount+' 页'"><a><i
+            class="v-page-li v-page-jump-next" :title="'next '+showPagingCount+' page'"><a><i
                 class="v-icon-angle-double-right"></i></a>
 
         <li v-if="pageCount >1" @click.stop.prevent="jumpPage(pageCount)"
