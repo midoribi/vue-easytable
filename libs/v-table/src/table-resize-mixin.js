@@ -160,6 +160,8 @@ exports.default = {
                 rightViewBody = this.$el.querySelector('.v-table-rightview .v-table-body'),
                 rightViewFooter = this.$el.querySelector('.v-table-rightview .v-table-footer');
 
+            rightViewBody.style.overflowY = 'auto';
+
             if (currentWidth <= initResizeWidths && !this.isTableEmpty) {
 
                 if (this.hasTableFooter) {
@@ -175,6 +177,9 @@ exports.default = {
                 if (this.getTotalColumnsHeight() > this.internalHeight) {
 
                     differ -= this.scrollbarWidth;
+                }
+                else {
+                    rightViewBody.style.overflowY = 'hidden';
                 }
 
                 if (this.hasTableFooter) {
